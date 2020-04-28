@@ -34,7 +34,7 @@ class AdjacencyMatrixGraph(Graph):
         super(AdjacencyMatrixGraph, self).__init__(numVertices, directed)
         self.matrix = np.zeros((numVertices, numVertices))
 
-    def add_edge(self, v1, v2, weight = 1):
+    def add_edge(self, v1, v2, weight=1):
         if v1 >= self.numVertices or v2 >= self.numVertices or v1 < 0 or v2 < 0:
             raise ValueError("Vertices %d and %d are out of bounds" % (v1, v2))
 
@@ -74,7 +74,7 @@ class AdjacencyMatrixGraph(Graph):
 
 
 g = AdjacencyMatrixGraph(4, True)
-#g = AdjacencyMatrixGraph(4, True)
+# g = AdjacencyMatrixGraph(4, True)
 
 g.add_edge(0, 1)
 g.add_edge(0, 2)
@@ -88,6 +88,6 @@ for i in range(4):
 
 for i in range(4):
     for j in g.get_adjacent_vertices(i):
-        print("Edge weight: ", i, " ", j, " weight: ", g.get_edge_weight(i,j))
+        print("Edge weight: ", i, " ", j, " weight: ", g.get_edge_weight(i, j))
 
 g.display()
