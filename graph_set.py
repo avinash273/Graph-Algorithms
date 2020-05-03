@@ -83,6 +83,7 @@ class AdjacencySetGraph(Graph):
             for v in self.get_adjacent_vertices(i):
                 print(i, "-->", v)
 
+
 # g = AdjacencySetGraph(4, True)
 g = AdjacencySetGraph(4, False)
 
@@ -101,3 +102,4 @@ for i in range(4):
         print("Edge weight: ", i, " ", j, " weight: ", g.get_edge_weight(i, j))
 
 g.display()
+# completes
